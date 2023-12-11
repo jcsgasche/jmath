@@ -25,16 +25,21 @@ def pq(x, y, z):
 
     # checking condition for discriminant
     if discri > 0: 
-        print("real and different roots:") 
-        print((-y + sqrtval)/(2 * x)) 
-        print((-y - sqrtval)/(2 * x)) 
+        print("Real and different roots") 
+        x1 = ((-y + sqrtval)/(2 * x)) 
+        x2 = ((-y - sqrtval)/(2 * x))
+        xs = [x1, x2]
+        return(xs)
 
     elif discri == 0:
-        print("real and same roots:") 
-        print(-y / (2 * x)) 
+        print("Real and same roots") 
+        x = (-y / (2 * x))
+        return(x)
 
     # when discriminant is less than 0
     else:
         print("Complex Roots") 
-        print(- y / (2 * x), " + i", sqrtval) 
-        print(- y / (2 * x), " - i", sqrtval)
+        x1 = (- y / (2 * x), " + i", sqrtval) 
+        x2 = (- y / (2 * x), " - i", sqrtval)
+        xs = [x1, x2]
+        return(xs)
